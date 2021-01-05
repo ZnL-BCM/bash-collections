@@ -1,6 +1,6 @@
 # bash-collections
 ## Zian Liu
-### Last updated: 12/30/2020
+### Last updated: 1/5/2020
 
 This repository contains a collection of bash scripts I have written over the years but are small enough that they don't fit into individual repositories. 
 
@@ -36,6 +36,11 @@ Please be aware that the third input needs to be in double parentheses.
 
 *Dependencies*: bash, bedtools/2.29.2
 
+## master-callminion.sh
+
+This is a simple demonstration of using a master command to call a subcommand. Another script, ``master-minion.sh``, is called in this script. 
+
+*Dependencies*: bash
 
 ## Usage
 
