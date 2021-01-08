@@ -1,0 +1,90 @@
+#!/bin/bash
+# tictactoe.sh, Start a minigame
+
+function printboard () {
+  clear
+  echo -e '
+   x1  x2  x3
+y1 '$1' | '$2' | '$3'
+   ---------
+y2 '$4' | '$5' | '$6'
+   ---------
+y3 '$7' | '$8' | '$9'
+  '
+  check_win_x $@
+  check_win_o $@
+  check_draw $@
+}
+
+function check_win_x () {
+  if [ "$5" == "X" ]; then
+    if [ "$4" == "X" ] && [ "$6" == "X" ]; then win "X"
+    elif [ "$2" == "X" ] && [ "$8" == "X" ]; then win "X"
+    elif [ "$1" == "X" ] && [ "$9" == "X" ]; then win "X"
+    fi
+  elif [[ "$1" == "X" ]]; then
+    if [[ "$4" == "X" ]] && [[ "$7" == "X" ]]; then win "X"
+    elif [[ "$2" == "X" ]] && [[ "$3" == "X" ]]; then win "X"
+    fi
+  elif [ "$9" == "X" ]; then
+    if [ "$3" == "X" ] && [ "$6" == "X" ]; then win "X"
+    elif [ "$7" == "X" ] && [ "$8" == "X" ]; then win "X"
+    fi
+  fi
+}
+
+function check_win_o () {
+  if [ "$5" == "O" ]; then
+    if [ "$4" == "O" ] && [ "$6" == "O" ]; then win "O"
+    elif [ "$2" == "O" ] && [ "$8" == "O" ]; then win "O"
+    elif [ "$1" == "O" ] && [ "$9" == "O" ]; then win "O"
+    fi
+  elif [[ "$1" == "O" ]]; then
+    if [[ "$4" == "O" ]] && [[ "$7" == "O" ]]; then win "O"
+    elif [[ "$2" == "O" ]] && [[ "$3" == "O" ]]; then win "O"
+    fi
+  elif [ "$9" == "O" ]; then
+    if [ "$3" == "O" ] && [ "$6" == "O" ]; then win "O"
+    elif [ "$7" == "O" ] && [ "$8" == "O" ]; then win "O"
+    fi
+  fi
+}
+
+function check_draw () {
+  if ! [[ $@ =~ "_" ]]; then echo "Draw game!"; exit 1; fi
+}
+
+function win () {
+  echo $1" wins! "; exit 1
+}
+
+
+ar=(_ _ _ _ _ _ _ _ _)
+
+while true
+do
+  player="X"
+  printboard ${ar[@]} $player
+  echo "Enter x and y locations (1-3 each):"
+  read loc1 loc2
+  loc=$((loc1+3*(loc2-1)-1))
+  while [[ "${ar[$loc]}" != "_" ]]; do
+    echo "Entered location is filled, enter a new location (1-3 each):"
+    read loc1 loc2
+    loc=$((loc1+3*(loc2-1)-1))
+  done
+  ar[$loc]=$player
+
+  player="O"
+  printboard ${ar[@]} $player
+  echo "Enter a location (1-3 each):"
+  read loc1 loc2
+  loc=$((loc1+3*(loc2-1)-1))
+  while [[ "${ar[$loc]}" != "_" ]]; do
+    echo "Entered location is filled, enter a new location (1-3 each):"
+    read loc1 loc2
+    loc=$((loc1+3*(loc2-1)-1))
+  done
+  ar[$loc]=$player
+
+done
