@@ -9,9 +9,10 @@ function help (){
   echo -e "-b|--beta\tdefine value of long, input can be extended indefinitely"
   echo -e "-c|--CAT\tcall the subprocess cat and opens the associated file"
   echo -e "-D|--default\tdefine a value that has a default value of FOO"
-  echo -e "-D2|--default2\tdefine a value that has a default value of GOO, but will trigger with or without the flag"
+  echo -e "-D2|--default2\tdefine a value that has a default value of GOO, but will trigger even without the flag"
   echo -e "-E|--ECHO\techoes all remaining commands (will override -c)"
   echo -e "-p|--python\tcalls an embedded python script"
+  echo -e "-p2|--python2\tcalls an embedded python script and displays it in-line"
   echo -e "-h|--help\tprint help"
   echo -e "--version\tprint version information"
   exit 0
