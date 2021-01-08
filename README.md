@@ -1,6 +1,6 @@
 # bash-collections
 ## Zian Liu
-### Last updated: 1/5/2020
+### Last updated: 1/8/2020
 
 This repository contains a collection of bash scripts I have written over the years but are small enough that they don't fit into individual repositories. 
 
@@ -41,6 +41,10 @@ Please be aware that the third input needs to be in double parentheses.
 This is a simple demonstration of using a master command to call a subcommand. Another script, ``master-minion.sh``, is called in this script. 
 
 *Dependencies*: bash
+
+## tictactoe executable
+
+Exactly what it sounds like, this is a linux executable that runs tic tac toe on your screen. The cross ("X") moves first. Only supports numerical input combinations of two values ranging from 1-3.
 
 ## Usage
 
