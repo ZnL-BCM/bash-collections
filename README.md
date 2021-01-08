@@ -6,20 +6,19 @@ This repository contains a collection of bash scripts I have written over the ye
 
 See the following individual sections:
 
-## summary_stats.sh
+## Completed
 
-Returns summary statistics (N, mean, stdev, percentiles) given an input list of numbers. This is a task that can be easily done in python/R; however, when external modules are not readily available, doing this with native bash commands can be advantageous. 
+These scripts are tested to work as intended. 
 
-Note that this script takes inputs only from STDIN, and the percentiles are hard-coded to be "0 25 50 75 100" at this point. I will update this document if I come up with a way that can take inputs.
+### example_function.sh
 
-As an example, run the following:
-```
-echo -e "1\n2\n3\n4\n5\n6\n7\n8\n9" | bash summary_stats.sh
-```
+This is a bash executable template that contains a basic example for how to write a functional executable.
 
-*Dependencies*: bash
+Please feel free to use it as a template to build your custom functions. For help, run ``./example_function.sh -h`` for more information.
 
-## process_noncoding.sh
+*Dependencies*: bash, python, numpy
+
+### process_noncoding.sh
 
 This is a two-step script that simultaneously 1) creates a temporary BED file that spans the entire lengths of chromosomes 1-22, X, and Y; and 2) removes BED coordinates from the previous temporary file to create BED coordinates for "noncoding background" regions of the human genome.
 
@@ -36,15 +35,28 @@ Please be aware that the third input needs to be in double parentheses.
 
 *Dependencies*: bash, bedtools/2.29.2
 
-## master-callminion.sh
+### tictactoe executable
 
-This is a simple demonstration of using a master command to call a subcommand. Another script, ``master-minion.sh``, is called in this script. 
+This is a linux executable that runs tic tac toe on your screen. The cross ("X") moves first. Only supports numerical input combinations of two values ranging from 1-3.
 
 *Dependencies*: bash
 
-## tictactoe executable
+## Under development
 
-Exactly what it sounds like, this is a linux executable that runs tic tac toe on your screen. The cross ("X") moves first. Only supports numerical input combinations of two values ranging from 1-3.
+These scripts are uploaded here but may not function correctly, use at your own risk.
+
+### summary_stats.sh
+
+Returns summary statistics (N, mean, stdev, percentiles) given an input list of numbers. This is a task that can be easily done in python/R; however, when external modules are not readily available, doing this with native bash commands can be advantageous. 
+
+Note that this script takes inputs only from STDIN, and the percentiles are hard-coded to be "0 25 50 75 100" at this point. I will update this document if I come up with a way that can take inputs.
+
+As an example, run the following:
+```
+echo -e "1\n2\n3\n4\n5\n6\n7\n8\n9" | bash summary_stats.sh
+```
+
+*Dependencies*: bash
 
 ## Usage
 
