@@ -1,4 +1,4 @@
-# !/bin/bash
+#!/bin/bash
 # process_noncoding.sh
 # Gets the noncoding region based on given annotations and exclusion regions
 
