@@ -1,6 +1,6 @@
 # bash-collections
 ## Zian Liu
-### Last updated: 1/8/2020
+### Last updated: 6/30/2021
 
 This repository contains a collection of bash scripts I have written over the years but are small enough that they don't fit into individual repositories. 
 
@@ -9,6 +9,12 @@ See the following individual sections:
 ## Completed
 
 These scripts are tested to work as intended. 
+
+### gtf2bed.sh
+
+Converts .gtf files into .bed files, with optional sorting and regions merging (requires *bedtools* for merging). 
+
+Run ``./gtf2bed.sh -h`` for help.
 
 ### example_function.sh
 
