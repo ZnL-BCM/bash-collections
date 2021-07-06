@@ -1,6 +1,6 @@
 # bash-collections
 ## Zian Liu
-### Last updated: 6/30/2021
+### Last updated: 7/6/2021
 
 This repository contains a collection of bash scripts I have written over the years but are small enough that they don't fit into individual repositories. 
 
@@ -9,6 +9,14 @@ See the following individual sections:
 ## Completed
 
 These scripts are tested to work as intended. 
+
+### sumcounts_bycoord.sh
+
+Concatenates, sorts, and adds records with duplicated genomic coordinates across certain fields. 
+
+See the in-file comments for more description. This is meant for a Bismark (CpG) read file!
+
+Credits to this random thread I found on the internet: https://www.unix.com/shell-programming-and-scripting/278229-do-replace-operation-awk-sum-multiple-columns-if-another-column-has-duplicate-values.html
 
 ### gtf2bed.sh
 
