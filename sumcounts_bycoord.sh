@@ -12,6 +12,8 @@ echo "Output file: "$Out
 # the script will add up fields 5, 6, and 7, 
 # and then re-calculate field 8 which is a division.
 # This is meant for a bisulfite sequencing read file (from Bismark) FYI
+# Note that the sort command is NECESSARY. 
+# If sort is too slow, add the option -S 50% (50% virtual memory buffering)
 
 cat $In |\
   grep -v "#" |\
