@@ -1,6 +1,6 @@
 # bash-collections
 ## Zian Liu
-### Last updated: 7/6/2021
+### Last updated: 10/1/2021
 
 This repository contains a collection of bash scripts I have written over the years but are small enough that they don't fit into individual repositories. 
 
@@ -8,21 +8,7 @@ See the following individual sections:
 
 ## Completed
 
-These scripts are tested to work as intended. 
-
-### sumcounts_bycoord.sh
-
-Concatenates, sorts, and adds records with duplicated genomic coordinates across certain fields. 
-
-See the in-file comments for more description. This is meant for a Bismark (CpG) read file!
-
-Credits to this random thread I found on the internet: https://www.unix.com/shell-programming-and-scripting/278229-do-replace-operation-awk-sum-multiple-columns-if-another-column-has-duplicate-values.html
-
-### gtf2bed.sh
-
-Converts .gtf files into .bed files, with optional sorting and regions merging (requires *bedtools* for merging). 
-
-Run ``./gtf2bed.sh -h`` for help.
+These scripts are tested to work as intended. Listed by alphabetical order.
 
 ### example_function.sh
 
@@ -30,7 +16,15 @@ This is a bash executable template that contains a basic example for how to writ
 
 Please feel free to use it as a template to build your custom functions. For help, run ``./example_function.sh -h`` for more information.
 
-*Dependencies*: bash, python, numpy
+Requires python and numpy to be installed.
+
+
+### gtf2bed.sh
+
+Converts .gtf files into .bed files, with optional sorting and regions merging (requires *bedtools* for merging). 
+
+Run ``./gtf2bed.sh -h`` for help.
+
 
 ### process_noncoding.sh
 
@@ -47,13 +41,27 @@ bash process_noncoding.sh hg38.fa out/noncoding "$(ls annotations/*.bed)"
 
 Please be aware that the third input needs to be in double parentheses.
 
-*Dependencies*: bash, bedtools/2.29.2
+
+### sumcounts_bycoord.sh
+
+Concatenates, sorts, and adds records with duplicated genomic coordinates across certain fields. 
+
+See the in-file comments for more description. This is meant for a Bismark (CpG) read file!
+
+Credits to [this Unix and Linux Forum thread](https://www.unix.com/shell-programming-and-scripting/278229-do-replace-operation-awk-sum-multiple-columns-if-another-column-has-duplicate-values.html), I do not claim ownership to the script. 
+
 
 ### tictactoe executable
 
 This is a linux executable that runs tic tac toe on your screen. The cross ("X") moves first. Only supports numerical input combinations of two values ranging from 1-3.
 
-*Dependencies*: bash
+
+### transposer.awk / transposer_slow.awk
+
+These are two awk scripts for transposing data; the first one is faster since it loads the entire data into RAM, while the second is theoretically slower but should work with larger datasets. These can be very helpful when it is impossible to install something like **rs** or **datamash** (a school cluster for example, *cough cough*)
+
+Copied from [this Stack Overflow thread](https://stackoverflow.com/questions/1729824/an-efficient-way-to-transpose-a-file-in-bash) and I do not claim ownership to either script.
+
 
 ## Under development
 
