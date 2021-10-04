@@ -12,7 +12,7 @@ These scripts are tested to work as intended. Listed by alphabetical order.
 
 ### bedchopper.awk
 
-This is an AWK script that functions analogously to ``bedops --chop 1 <input_bed>``. This is useful when we want to cut a BED region to 1bp increments but don't have bedops installed (hopefully this rarely happens to you!).
+This is an AWK script that functions analogously to ``bedops --chop 1 <input_bed>``. This is useful when we want to cut a BED region to 1bp increments but don't have bedops installed (hopefully this never happens to you!).
 
 
 ### example_function.sh
