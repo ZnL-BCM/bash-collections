@@ -49,7 +49,9 @@ Please be aware that the third input needs to be in double parentheses.
 
 ### slideshow.sh
 
-Runs an image slideshow from a directory with feh. Requires `feh` and `highlight-pointer`. 
+Runs an image slideshow from a directory with feh, paired with a fancy mouse highlighter.
+
+Requires [feh](https://github.com/derf/feh) and [highlight-pointer](https://github.com/swillner/highlight-pointer), both should be available on official/unofficial repos if you are using a linux-based system. 
 
 
 ### sumcounts_bycoord.sh
