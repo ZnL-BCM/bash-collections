@@ -1,6 +1,6 @@
 # bash-collections
 ## Zian Liu
-### Last updated: 10/3/2021
+### Last updated: 4/18/2022
 
 This repository contains a collection of bash scripts I have written over the years but are small enough that they don't fit into individual repositories. 
 
@@ -45,6 +45,11 @@ bash process_noncoding.sh hg38.fa out/noncoding "$(ls annotations/*.bed)"
 ```
 
 Please be aware that the third input needs to be in double parentheses.
+
+
+### slideshow.sh
+
+Runs an image slideshow from a directory with feh. Requires `feh` and `highlight-pointer`. 
 
 
 ### sumcounts_bycoord.sh
